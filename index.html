@@ -5,21 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Eventos Raspberry Pi Santiago del Estero</title>
   <style>
+
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+      background: linear-gradient(135deg, #f9f9f9 60%, #e3e6f3 100%);
+      color: #222;
       margin: 0;
+      min-height: 100vh;
     }
 
+
     header {
-      background-color: #a00;
-      color: white;
-      padding: 2rem 1rem;
+      background: linear-gradient(90deg, #d32f2f 60%, #1976d2 100%);
+      color: #fff;
+      padding: 2.5rem 1rem 2rem 1rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 1rem;
+      gap: 1.5rem;
+      box-shadow: 0 4px 16px rgba(50,50,50,0.08);
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
     }
 
     header img {
@@ -28,138 +34,213 @@
       object-fit: contain;
     }
 
+
     header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.3rem;
+      letter-spacing: 1px;
+      font-weight: 700;
+      text-shadow: 1px 2px 8px rgba(0,0,0,0.08);
     }
 
     header p {
       margin: 0;
     }
 
+
     main {
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem 2rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
     }
+
 
     section {
-      margin-bottom: 2em;
-      padding: 1.5em;
-      background-color: #f5f5f5;
-      border-radius: 10px;
+      margin-bottom: 2.2em;
+      padding: 1.7em 1.3em;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 2px 16px rgba(50,50,50,0.07);
+      transition: box-shadow 0.3s;
+    }
+    section:hover {
+      box-shadow: 0 6px 24px rgba(50,50,50,0.13);
     }
 
+
     h2 {
-      color: #d32f2f;
+      color: #1976d2;
+      font-size: 1.5rem;
+      margin-bottom: 0.7em;
+      letter-spacing: 0.5px;
     }
+
 
     .botones {
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
+      flex-direction: row;
       align-items: center;
-      gap: 1rem;
+      justify-content: center;
+      gap: 1.2rem;
       margin-top: 1.5rem;
     }
 
+
     .botones a {
       width: 100%;
-      max-width: 300px;
+      max-width: 240px;
+      text-align: center;
     }
+
 
     .botones a button {
       width: 100%;
-      font-size: 1em;
-      padding: 10px 20px;
+      font-size: 1.08em;
+      padding: 12px 0;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
+      font-weight: 600;
+      box-shadow: 0 2px 8px rgba(30,30,30,0.07);
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
     }
+    .botones a button:active {
+      transform: scale(0.97);
+    }
+
 
     .formulario-btn {
-      background-color: #d32f2f;
+      background: linear-gradient(90deg, #d32f2f 70%, #f44336 100%);
       color: white;
     }
-
     .formulario-btn:hover {
-      background-color: #b71c1c;
+      background: linear-gradient(90deg, #b71c1c 70%, #d32f2f 100%);
+      box-shadow: 0 4px 16px rgba(211,47,47,0.13);
     }
+
 
     .organizar-btn {
-      background-color: #1976d2;
+      background: linear-gradient(90deg, #1976d2 70%, #64b5f6 100%);
       color: white;
     }
-
     .organizar-btn:hover {
-      background-color: #0d47a1;
+      background: linear-gradient(90deg, #0d47a1 70%, #1976d2 100%);
+      box-shadow: 0 4px 16px rgba(25,118,210,0.13);
     }
     
     /* Estilos para los nuevos botones de herramientas */
+
     .tinkercad-btn {
-        background-color: #9bac04; /* Un color distintivo para Tinkercad */
-        color: white;
+      background: linear-gradient(90deg, #9bac04 70%, #cddc39 100%);
+      color: white;
     }
-    
     .tinkercad-btn:hover {
-        background-color: #005a5a;
+      background: linear-gradient(90deg, #7a8b03 70%, #9bac04 100%);
+      box-shadow: 0 4px 16px rgba(155,172,4,0.13);
     }
 
     .arduino-btn {
-        background-color: #00979D; /* Color de Arduino */
-        color: white;
+      background: linear-gradient(90deg, #00979D 70%, #00bfae 100%);
+      color: white;
     }
-    
     .arduino-btn:hover {
-        background-color: #006064;
+      background: linear-gradient(90deg, #006064 70%, #00979D 100%);
+      box-shadow: 0 4px 16px rgba(0,151,157,0.13);
     }
-     .juegos-btn {
-        background-color: #1853c0; /* Color de Arduino */
-        color: white;
+    .juegos-btn {
+      background: linear-gradient(90deg, #1853c0 70%, #64b5f6 100%);
+      color: white;
     }
-    
     .juegos-btn:hover {
-        background-color: #053988;
+      background: linear-gradient(90deg, #053988 70%, #1853c0 100%);
+      box-shadow: 0 4px 16px rgba(24,83,192,0.13);
     }
     /* Fin de nuevos estilos */
 
+
     a {
       text-decoration: none;
+      color: inherit;
     }
+
 
     footer {
       text-align: center;
-      padding: 1em;
-      background-color: #eeeeee;
+      padding: 1.2em 1em 1.2em 1em;
+      background: linear-gradient(90deg, #eeeeee 60%, #e3e6f3 100%);
       color: #333;
+      font-size: 1.05em;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      margin-top: 2em;
+      box-shadow: 0 -2px 12px rgba(50,50,50,0.07);
     }
+
 
     .galeria {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.3rem;
+      margin-top: 1.2rem;
     }
+
 
     .galeria figure {
       margin: 0;
       text-align: center;
+      background: #f5f7fa;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(30,30,30,0.07);
+      padding: 0.7em 0.3em 1em 0.3em;
+      transition: box-shadow 0.2s;
     }
+    .galeria figure:hover {
+      box-shadow: 0 6px 18px rgba(30,30,30,0.13);
+    }
+
 
     .galeria img {
       width: 100%;
       height: 160px;
       object-fit: cover;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
-
     .galeria img:hover {
-      transform: scale(1.05);
+      transform: scale(1.06);
+      box-shadow: 0 6px 18px rgba(30,30,30,0.13);
     }
 
     .galeria figcaption {
       margin-top: 0.5rem;
-      font-size: 0.9em;
-      color: #666;
+      font-size: 1em;
+      color: #444;
+      font-weight: 500;
+    }
+    /* Responsive para móviles */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+        border-bottom-left-radius: 18px;
+        border-bottom-right-radius: 18px;
+      }
+      main {
+        padding: 1.2rem 0.3rem 1.2rem 0.3rem;
+      }
+      section {
+        padding: 1em 0.5em;
+        border-radius: 10px;
+      }
+      .galeria {
+        grid-template-columns: 1fr;
+      }
+      .botones {
+        flex-direction: column;
+        gap: 0.7rem;
+      }
     }
   </style>
 </head>
@@ -180,7 +261,7 @@
       </p>
       <h2>🎉 Próximos eventos - Gratis</h2>
       <ul>
-        <li>📅 20 de Diciembre - Taller: Sistema de Riego con raspberry pi</li>
+        <li>📅 20 de Abril - Taller: Automatización con Raspberry Pi</li>
       </ul>
     </section>
     
@@ -206,9 +287,9 @@
           <button class="tinkercad-btn">Ir a Tinkercad (Simulación)</button>
         </a>
         <a href="https://www.arduino.cc/en/software/" target="_blank">
-          <button class="arduino-btn">Descargar IDE de Arduino</button>
+          <button class="arduino-btn">Descargar IDE </button>
           <a href="https://projects.raspberrypi.org/en" target="_blank">
-          <button class="juegos-btn">Juegos</button>
+          <button class="juegos-btn">Juegos raspberry pi </button>
         </a>
       </div>
     </section>
@@ -230,19 +311,19 @@
       <h2>📷 Eventos</h2>
       <div class="galeria">
         <figure>
-          <img src="https://scontent.fsde2-1.fna.fbcdn.net/v/t39.30808-6/555613259_10237753755681153_8138174733069221049_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEojoR85EOu6rKzeCx6fCF5vh1VIBG32N6-HVUgEbfY3t-HMgXaQn-Y9fnAWebIgI0&_nc_ohc=kU_WWCYg63cQ7kNvwFpBbd-&_nc_oc=AdnimQ35w3Y2aHqJbzufZSZsTqGTegaiMKxwbVv8whIY7_aQ9imUUkBio6OJ0yDC3sw&_nc_zt=23&_nc_ht=scontent.fsde2-1.fna&_nc_gid=r-HsB6kC0haw6MYEoq36VQ&oh=00_AfnyjwT5K6Zt4cYtHPSehCO6pPCEBKHU6Ng4L092ijXimw&oe=6940EE4C" alt=".">
+          <img src="https://static.misionesonline.news/wp-content/uploads/2021/08/Robotica-c2-1024x1024.jpeg" alt=".">
           <figcaption>Robótica para niños</figcaption>
         </figure>
         <figure>
-          <img src="https://scontent.fsde2-1.fna.fbcdn.net/v/t39.30808-6/555556842_10237753713600101_5061977026627240008_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFXpuEQyOdGv2P2KgMS-yHdyVIzp_wWBUXJUjOn_BYFRX9X5Tw34gpV7Dz6mggtMYo&_nc_ohc=3Vd7DlylSYUQ7kNvwFuTtBR&_nc_oc=AdkmA6kfMBhzsVebfDNHzsL-HScH9EoHf6n3CckLTDVzmZd_zFrflM7ryOceZhGN_L8&_nc_zt=23&_nc_ht=scontent.fsde2-1.fna&_nc_gid=wEpK1ZV8XE2DwSSQzn6EKw&oh=00_Afnnyz95nRxOiycitF0_nB4MP7VtqN_mlMA3Y-dj1eVG0w&oe=6940EEC5" alt="">
+          <img src="https://radiodon.com.ar/wp-content/uploads/2019/08/CopaRobotica2019_competencia_robots_31agosto2019_1.jpg" alt="">
           <figcaption>Robótica y programación para docentes</figcaption>
         </figure>
         <figure>
-          <img src="https://scontent.fsde2-1.fna.fbcdn.net/v/t39.30808-6/555609088_10237753691279543_6572197144461537297_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeH_Fcg3maipAlqFjRJmSGUnywUXeu97psfLBRd673umxy4cI2kJyy5u63P0bIyVv_k&_nc_ohc=2bGwGXT21dsQ7kNvwHVile7&_nc_oc=AdnXhvxE3pAfNBIaauue44vnAM86CYEdVtHC_hG52WGUKnMvlO1BFB4mV9oO97pIfC8&_nc_zt=23&_nc_ht=scontent.fsde2-1.fna&_nc_gid=cJXpOXb0BLGXz7i22Ly2Rw&oh=00_Afn9xv2ElxpBqk4Ro_O3r2jgAAUi5ynTixXDGKqRdPqYdw&oe=6940BDD3" alt="">
+          <img src="https://multimediosgenesis.com.ar/images/noticias/4832_1748373394.jpeg" alt="">
           <figcaption>Público en general</figcaption>
         </figure>
          <figure>
-          <img src="https://scontent.fsde2-1.fna.fbcdn.net/v/t39.30808-6/555523662_10237753695239642_3098582277280973350_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFa4XewE6ieqyQnNjTtSORtr6rqtlJLK6mvquq2UksrqeRzKkUhF7ppRlipH12GFfY&_nc_ohc=dnKNZM6l3sQQ7kNvwGBF9iW&_nc_oc=AdmRWgsBDcohFgv83ofPD0gQpCAyq4LGRXwbsu2mTIj4WuSzYtSpGVH0UOmJGpgw1Hw&_nc_zt=23&_nc_ht=scontent.fsde2-1.fna&_nc_gid=zOM2b6ukhRkzC0KKvnQKtg&oh=00_AfnYxvcWgYkWxoJQzNP70TRoUL9uxHbY7nBGNxYVWmqbxg&oe=6940D706" alt="">
+          <img src="https://static.misionesonline.news/wp-content/uploads/2022/10/Copa-Robotica-Misiones2.jpg" alt="">
           <figcaption>Público en general</figcaption>
         </figure>
       </div>|
